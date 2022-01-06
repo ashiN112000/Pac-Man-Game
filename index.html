@@ -1,0 +1,312 @@
+[17:32, 06/01/2022] Amit: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman</title>
+    <link href="pac.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/068f9eae16.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <h2>Score:<span id="score"></span></h2>
+    
+
+    <div class="whole">
+
+        <div class="grid"></div>
+       
+        <div class="buttons-container">
+
+            <div class="movingbutton">
+
+                    <button class="left"><i class="fas fa-arrow-left" style="font-size: 30px;"></i></button>
+                        
+                    <div class="middle">
+
+                        <button class="up"><i class="fas fa-arrow-up"style="font-size: 30px;" ></i></button>
+                        <button class="down"><i class="fas fa-arrow-down" style="font-size: 30px;"></i></button>
+
+                    </div>
+
+                    <div class="right">
+
+                        <button class="rbut"><i class="fas fa-arrow-right" style="font-size: 30px;"></i></button>
+                        
+                    </div>
+
+                    
+                </div>
+
+                <div class="managingbutton">
+                    <button class="start-button">Start</button>
+                    <button class="restart">Restart</button>
+                </div>
+        </div>
+    </div>
+
+    
+</body>
+<script src="pac.js"></script>
+</html>
+[17:32, 06/01/2022] Amit: body , html{
+    margin:10px;
+    padding: 10px;
+    background-color:rgb(194, 184, 184);
+    align-items: center;
+   
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Balthazar', serif;
+    font-family: 'Lato', sans-serif;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 420px;
+    height: 420px;
+    border: solid black;
+    background-color: white;
+}
+
+.whole{
+    max-width: 600px;
+    align-items: center;
+}
+
+.buttons-container{
+
+    margin-top: 20px;
+    margin-left: 150px;
+    
+    
+}
+
+.movingbutton{
+    display: flex;
+    align-items: center;
+}
+
+.movingbutton button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: -1px 1px 8px -2px rgba(0, 0, 0, 0.65);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-image: linear-gradient(to left , rgb(48, 46, 46) , rgb(99, 95, 95));
+   
+    
+   
+}
+
+.left:hover , .left:focus{
+
+    transform: scale(1.1);
+}
+
+.up:hover , .up:focus{
+
+    transform: scale(1.1);
+}
+
+
+.down:hover , .down:focus{
+
+    transform: scale(1.1);
+}
+
+.rbut:hover , .rbut:focus{
+
+    transform: scale(1.1);
+}
+
+.start-button{
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: -1px 1px 10px -2px rgba(0, 0, 0, 0.85);
+    border-radius: 4px;
+    color: white;
+    background-image: linear-gradient(to left , rgb(48, 46, 46) , rgb(99, 95, 95));
+    font-weight: 500;
+    font-size: 18px;
+    transform: scale(1);
+}
+
+.restart{
+
+    width: 100px;
+    height: 30px;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: -1px 1px 10px -2px rgba(0, 0, 0, 0.85);
+    border-radius: 4px;
+    color: white;
+    background-image: linear-gradient(to left , rgb(48, 46, 46) , rgb(99, 95, 95));
+    font-weight: 500;
+    font-size: 18px;
+    transform: scale(1);
+}
+
+.start-button:hover , .start-button:focus {
+
+    transform:scale(1.1);
+}
+
+.restart:hover , .restart:focus {
+
+    transform: scale(1.1);
+}
+
+.left {
+   margin-right: 7px;
+   padding-left: 10px;
+   transform: scale(1);
+}
+
+.up{
+    margin-bottom: 7px;
+    padding-left: 10px;
+    transform: scale(1);
+ }
+
+ .down{
+    margin-top: 7px;
+    padding-left: 10px;
+    transform: scale(1);
+    
+ }
+
+ .rbut{
+    margin-left: 7px;
+    padding-left: 10px;
+    transform: scale(1);
+ }
+
+ .managingbutton{
+
+    margin-top: 20px;
+ }
+
+
+.grid div {
+    width: 15px;
+    height: 15px;
+}
+
+
+.pacdot{
+    background-color: green;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+.pacman{
+    background-color: rgb(238, 189, 146);
+    border-radius: 7.5px;
+    border: none;
+}
+
+.powerpallets{
+    background-color: rgb(19, 94, 19);
+    border-radius: 7.5px;
+}
+
+.walls{
+    background-color:rgb(76, 75, 105);
+    
+    
+}
+
+.tim{
+    background-color: rgb(221, 20, 20);
+    border: none;
+    
+}
+
+.rim{
+    background-color:rgb(56, 38, 219);
+    border: none;
+}
+
+.kim{
+    background-color: rgb(163, 14, 163);
+    border: none;
+}
+
+.sim{
+    background-color: orangered;
+    border: none;
+}
+
+.scared-evil{
+
+    background-color: rgb(243, 64, 94);
+    border: none;
+}
+
+@media(min-width : 900px){
+    .grid{
+        width : 476px;
+        height: 476px;
+    }
+
+    .grid div{
+        width: 17px;
+        height: 17px;
+    }
+
+    h2{
+        text-align: center;
+    }
+    
+
+    .whole{
+        display: flex;
+        max-width: 100%;
+        margin-top: 5px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+    }
+
+    .movingbutton button{
+        width: 70px;
+        height: 70px;
+
+    }   
+    
+    .start-button , .restart{
+        width: 150px;
+        height: 45px;
+
+    }    
+
+
+    .buttons-container{
+
+        display: flex;
+        margin-left: 0px;
+    }
+    .managingbutton{
+        margin-left: 80px;
+    }
+
+    .left , .up , .down , .rbut{
+
+        padding-left: 20px;
+    }
+
+}
